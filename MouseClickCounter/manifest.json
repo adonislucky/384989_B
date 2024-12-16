@@ -1,0 +1,16 @@
+{
+  "manifest_version": 3,
+  "name": "Mouse Click Counter",
+  "version": "1.0",
+  "description": "Plays a sound every 10 mouse clicks.",
+  "permissions": ["storage"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ]
+}
